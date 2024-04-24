@@ -14,7 +14,7 @@
 ![](img/tools.png)
 
 ## 工具依赖
-#### 需要安装chrome浏览器，并且根据浏览器的版本找到对应的 [chromedriver](http://chromedriver.storage.googleapis.com/index.html) 下载，解压到python安装的根目录下即可。
+#### 需要安装chrome浏览器，并且根据浏览器的版本找到对应的chromedriver浏览器驱动，chrome浏览器版本在114之前的，可通过 http://chromedriver.storage.googleapis.com/index.html 地址进行下载，chrome浏览器版本在115以上的，可通过 https://storage.googleapis.com/chrome-for-testing-public/{chrome浏览器版本号}/win32/chromedriver-win32.zip 进行下载，然后将chromedriver浏览器驱动解压到python安装的根目录下即可。
 
 ![](img/chrome.png)
 
