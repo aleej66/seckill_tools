@@ -14,9 +14,9 @@ def run_killer(time, password, platform):
     # 平台类型
     platform = platform.get()
     # print(seckill_time, password)
-    if platform == "京东":
+    if platform == "JD":
         JDong(seckill_time_str=seckill_time, password=password).sec_kill(login_time_out=15)
-    elif platform == "淘宝":
+    elif platform == "TBao":
         TaoBao(seckill_time_str=seckill_time, password=password).sec_kill(login_time_out=15)
     else:
         raise Exception("未知平台类型")
@@ -24,7 +24,7 @@ def run_killer(time, password, platform):
 
 def main():
     win = Tk()
-    win.title('电商秒杀助手')
+    win.title('御剑乘风来')
     win.iconbitmap("img/icon.ico")
     width = 540
     height = 350
@@ -52,15 +52,15 @@ def main():
     label3.grid(column=0, row=2)
     platform_value = StringVar()
     platform = Combobox(win, textvariable=platform_value, width=18, font=("Lucida Grande", 13))
-    platform["values"] = ("京东", "淘宝")
+    platform["values"] = ("JD", "TBao")
     # 默认选择第一个
-    platform.current(0)
+    platform.current(1)
     platform.grid(column=1, row=2)
 
     # 开始抢购
-    b1 = Button(win, text='开始抢购',
+    b1 = Button(win, text='Start buying',
                 command=lambda: run_killer(time, password, platform),
-                background="green", width=21, height=6,
+                background="grey", width=21, height=6,
                 font=("Lucida Grande", 13))
     b1.place(x=320, y=16)
     win.resizable(width=False, height=False)
@@ -84,7 +84,7 @@ def main():
                  fg='green')
     txt3.place(x=15, y=230)
 
-    txt4 = Label(win, text='4、输入开抢时间和支付密码后点开始，程序会控制浏览器打开淘宝登陆页',
+    txt4 = Label(win, text='4、输入开抢时间和支付密码后点开始，程序会控制浏览器打开TBao登陆页',
                  font=("Lucida Grande", 10),
                  fg='green')
     txt4.place(x=15, y=255)

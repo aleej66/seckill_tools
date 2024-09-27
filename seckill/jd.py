@@ -15,7 +15,7 @@ from utils.utils import build_chrome_options
 max_retry_count = 30
 
 
-# 自动抢票类（京东）
+# 自动抢票类（JD）
 class JDong:
 
     def __init__(self, chrome_path="./chromedriver.exe", seckill_time_str=None, password=None):
@@ -48,7 +48,7 @@ class JDong:
                 raise Exception("Unable to find chromedriver, Please check the drive path.")
         return driver
 
-    # 登录京东
+    # 登录JD
     def login(self, login_url="https://jd.com", login_time_out=10):
         if login_url:
             self.driver = self.start_driver()
@@ -115,7 +115,7 @@ class JDong:
                                               '//div[@class="column t-checkbox"]//input[@class="jdcheckbox"]')
         if select_all:
             # 获取全选框的值（如果已选中，则返回true，否则返回None）
-            # 因为京东会记录上一次选中的情况，所以需要判断是否选中，如果未选中，才去自动选中。
+            # 因为JD会记录上一次选中的情况，所以需要判断是否选中，如果未选中，才去自动选中。
             is_check_all = select_all.get_attribute('checked')
             # print(is_check_all)
             if not is_check_all:
@@ -134,7 +134,7 @@ class JDong:
             now = datetime.now()
             if now >= self.seckill_time:
                 # 正式抢购时，再次检查是否选中了商品
-                # 因为京东秒杀时间之前，是不能够选择商品的，所以在正式抢购时，需要再次判断是否选中
+                # 因为JD秒杀时间之前，是不能够选择商品的，所以在正式抢购时，需要再次判断是否选中
                 if select_all:
                     is_check_all = select_all.get_attribute('checked')
                     # print(is_check_all)
