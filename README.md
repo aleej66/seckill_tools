@@ -1,17 +1,6 @@
-# seckill_tools
-同时支持多种电商平台的商品秒杀（抢购）活动，如**TBao、天猫、JD**商品秒杀等。
 
-> 本项目是在作者 `jerry3747` 的仓库代码基础之上，进行了优化。
->
-> 主要有：
->
-> ​	1、优化了**秒杀代码的逻辑**，进行了**代码注释**，并优化了**脚本工具界面的外观**，可用性增强。
->
-> ​	2、功能增强，**新增了对JD平台的商品秒杀功能。**
->
-> 如需要访问原仓库，移步 https://github.com/jerry3747/taobao_seckill 
 
-![](img/tools.png)
+
 
 ## 工具依赖
 #### 需要安装chrome浏览器，并且根据浏览器的版本找到对应的chromedriver浏览器驱动，chrome浏览器版本在114之前的，可通过 http://chromedriver.storage.googleapis.com/index.html 地址进行下载，chrome浏览器版本在115以上的，可通过 https://storage.googleapis.com/chrome-for-testing-public/{chrome浏览器版本号}/win32/chromedriver-win32.zip 进行下载，然后将chromedriver浏览器驱动解压到python安装的根目录下即可。
